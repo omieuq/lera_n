@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap');
+
 *{
     margin:0;
     padding:0;
@@ -5,165 +7,141 @@
 }
 
 body{
-    background:#050505;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255,0,60,.12),
+            transparent 60%
+        ),
+        #050505;
+
     height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
     overflow:hidden;
-    font-family:Segoe UI, sans-serif;
 }
 
-/* фон */
-
-body::before{
-    content:"";
+.bg{
     position:absolute;
     inset:0;
-
-    background:
-    radial-gradient(circle at center,
-    rgba(255,0,0,.15),
-    transparent 70%);
-
-    z-index:-2;
-}
-
-/* ромбы */
-
-body::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    opacity:.4;
-
-    background:
-    linear-gradient(45deg,
-    transparent 48%,
-    rgba(255,0,0,.25) 50%,
-    transparent 52%);
-
-    background-size:120px 120px;
-
+    pointer-events:none;
     z-index:-1;
 }
-
-/* карточка */
 
 .card{
     display:none;
 
-    width:800px;
+    position:relative;
+    z-index:10;
+
+    width:750px;
     max-width:90%;
 
     padding:70px 50px;
 
     text-align:center;
+    color:white;
 
-    background:rgba(0,0,0,.75);
+    background:rgba(0,0,0,.65);
 
     border-radius:30px;
 
-    backdrop-filter:blur(5px);
+    box-shadow:
+        0 0 50px rgba(255,0,50,.4),
+        inset 0 0 40px rgba(255,0,50,.15);
 }
 
 .active{
     display:block;
 }
 
-/* заголовок */
-
 h1{
-    font-size:70px;
-    font-weight:300;
+    font-family:'Great Vibes', cursive;
+    font-size:90px;
+    font-weight:normal;
     color:white;
-    margin-bottom:10px;
+    margin-bottom:15px;
 }
 
 h1 span{
     display:block;
-
-    color:#ff4040;
+    color:#ff3b5f;
 
     text-shadow:
-    0 0 10px #ff4040,
-    0 0 20px #ff4040,
-    0 0 40px #ff4040,
-    0 0 80px #ff4040;
+        0 0 10px #ff2d55,
+        0 0 20px #ff2d55,
+        0 0 40px #ff2d55;
 }
 
-/* текст */
+h2{
+    color:#ff4d6d;
+    font-size:55px;
+
+    text-shadow:
+        0 0 10px #ff2d55,
+        0 0 30px #ff2d55;
+}
 
 p{
-    color:white;
+    font-family:'Montserrat', sans-serif;
     font-size:28px;
     margin:35px 0;
+    color:white;
 }
 
-/* кнопка */
+button{
+    cursor:pointer;
+}
 
 .heart-btn{
-    width:320px;
-    height:100px;
+    width:280px;
+    height:90px;
 
-    border-radius:60px;
-
-    border:3px solid #ff4040;
+    border-radius:999px;
 
     background:transparent;
 
-    color:#ff6a6a;
+    border:3px solid #ff3b5f;
 
-    font-size:55px;
-
-    cursor:pointer;
+    color:#ff5a7a;
+    font-size:50px;
 
     box-shadow:
-    0 0 10px #ff4040,
-    0 0 30px #ff4040;
+        0 0 15px #ff2d55,
+        0 0 30px #ff2d55;
 
     transition:.3s;
 }
 
 .heart-btn:hover{
-    transform:scale(1.08);
+    transform:scale(1.05);
 
     box-shadow:
-    0 0 20px #ff4040,
-    0 0 50px #ff4040,
-    0 0 80px #ff4040;
-}
-
-h2{
-    color:#ff4040;
-
-    font-size:55px;
-
-    text-shadow:
-    0 0 15px #ff4040,
-    0 0 40px #ff4040;
-}
-
-.final{
-    color:#ff4040;
+        0 0 20px #ff2d55,
+        0 0 50px #ff2d55;
 }
 
 .progress{
     margin-top:25px;
     width:100%;
     height:12px;
-    background:#111;
+
     border-radius:20px;
+    background:#222;
+
     overflow:hidden;
 }
 
 .bar{
-    height:100%;
     width:0;
+    height:100%;
 
-    background:#ff4040;
+    background:#ff2a55;
 
-    box-shadow:0 0 20px #ff4040;
+    box-shadow:
+        0 0 10px #ff2d55,
+        0 0 25px #ff2d55;
 
     animation:load 4s linear forwards;
 }
@@ -172,7 +150,23 @@ h2{
     from{
         width:0;
     }
+
     to{
         width:100%;
     }
+}
+
+.final{
+    color:#ff3b5f;
+
+    text-shadow:
+        0 0 10px #ff2d55,
+        0 0 30px #ff2d55,
+        0 0 50px #ff2d55;
+}
+
+.dots{
+    color:#ff4d6d;
+    font-size:40px;
+    margin-bottom:20px;
 }
