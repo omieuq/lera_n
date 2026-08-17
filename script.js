@@ -1,10 +1,11 @@
-alert("JS работает!");
 function hideAll() {
     document.querySelectorAll(".card")
         .forEach(card => card.classList.remove("active"));
 }
 
 function showOops() {
+    alert("Кнопка нажалась");
+}
     hideAll();
     document.getElementById("screen2")
         .classList.add("active");
