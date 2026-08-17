@@ -5,8 +5,9 @@ function hideAll() {
 
 function showOops() {
     alert("Кнопка нажалась");
-}
+
     hideAll();
+
     document.getElementById("screen2")
         .classList.add("active");
 }
