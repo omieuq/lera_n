@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кому ты нравишься?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg"></div>
+
+<!-- Экран 1 -->
+<div class="card active" id="screen1">
+
+    <h1>
+        Кому ты <br>
+        <span>нравишься?</span>
+    </h1>
+
+    <p>
+        Нажми на кнопку,<br>
+        чтобы узнать секрет
+    </p>
+
+    <button class="heart-btn" onclick="showOops()">
+        ❤️
+    </button>
+
+</div>
+
+<!-- Экран 2 -->
+<div class="card" id="screen2">
+
+    <h2>Oops!</h2>
+
+    <p>
+        Что-то пошло не так...<br><br>
+        Ты слишком рано 😜
+    </p>
+
+    <button onclick="showLoading()">
+        Попробовать ещё раз
+    </button>
+
+</div>
+
+<!-- Экран 3 -->
+<div class="card" id="screen3">
+
+    <div class="dots">
+        • • •
+    </div>
+
+    <p>
+        Проверяем информацию...<br><br>
+        Не подглядывай 🤫
+    </p>
+
+    <div class="progress">
+        <div class="bar"></div>
+    </div>
+
+</div>
+
+<!-- Экран 4 -->
+<div class="card" id="screen4">
+
+    <h2>♡ Бинго! ♡</h2>
+
+    <p>...Ты мне нравишься...</p>
+
+    <h1 class="final">
+        ♡ ТОЧНО ТЫ ♡
+    </h1>
+
+    <button>
+        Я знал!
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
