@@ -2,126 +2,168 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
 }
 
 body{
-    background:#070707;
+    background:#050505;
     height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
     overflow:hidden;
+    font-family:Segoe UI, sans-serif;
 }
 
-.bg{
+/* фон */
+
+body::before{
+    content:"";
     position:absolute;
     inset:0;
 
     background:
-    radial-gradient(
-        circle at center,
-        rgba(255,0,0,.15),
-        transparent 60%
-    );
+    radial-gradient(circle at center,
+    rgba(255,0,0,.15),
+    transparent 70%);
 
-    pointer-events:none;
+    z-index:-2;
+}
+
+/* ромбы */
+
+body::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    opacity:.4;
+
+    background:
+    linear-gradient(45deg,
+    transparent 48%,
+    rgba(255,0,0,.25) 50%,
+    transparent 52%);
+
+    background-size:120px 120px;
+
     z-index:-1;
 }
+
+/* карточка */
 
 .card{
     display:none;
 
-    position:relative;
-    z-index:10;
-
-    width:700px;
+    width:800px;
     max-width:90%;
-    padding:60px;
+
+    padding:70px 50px;
 
     text-align:center;
-    color:white;
-
-    border:2px solid rgba(255,60,60,.4);
-    border-radius:35px;
 
     background:rgba(0,0,0,.75);
 
-    box-shadow:
-        0 0 20px red,
-        inset 0 0 20px rgba(255,0,0,.4);
+    border-radius:30px;
+
+    backdrop-filter:blur(5px);
 }
 
 .active{
     display:block;
 }
 
+/* заголовок */
+
 h1{
-    font-size:60px;
-    margin-bottom:20px;
+    font-size:70px;
+    font-weight:300;
+    color:white;
+    margin-bottom:10px;
 }
 
 h1 span{
-    color:#ff2f2f;
-    text-shadow:0 0 15px red;
+    display:block;
+
+    color:#ff4040;
+
+    text-shadow:
+    0 0 10px #ff4040,
+    0 0 20px #ff4040,
+    0 0 40px #ff4040,
+    0 0 80px #ff4040;
+}
+
+/* текст */
+
+p{
+    color:white;
+    font-size:28px;
+    margin:35px 0;
+}
+
+/* кнопка */
+
+.heart-btn{
+    width:320px;
+    height:100px;
+
+    border-radius:60px;
+
+    border:3px solid #ff4040;
+
+    background:transparent;
+
+    color:#ff6a6a;
+
+    font-size:55px;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 0 10px #ff4040,
+    0 0 30px #ff4040;
+
+    transition:.3s;
+}
+
+.heart-btn:hover{
+    transform:scale(1.08);
+
+    box-shadow:
+    0 0 20px #ff4040,
+    0 0 50px #ff4040,
+    0 0 80px #ff4040;
 }
 
 h2{
-    color:#ff4d4d;
-    font-size:50px;
-    text-shadow:0 0 20px red;
+    color:#ff4040;
+
+    font-size:55px;
+
+    text-shadow:
+    0 0 15px #ff4040,
+    0 0 40px #ff4040;
 }
 
-p{
-    margin:30px 0;
-    font-size:24px;
-}
-
-button{
-    padding:18px 50px;
-    border:none;
-    border-radius:18px;
-
-    background:transparent;
-    color:white;
-
-    font-size:22px;
-    cursor:pointer;
-
-    border:2px solid #ff3b3b;
-
-    box-shadow:0 0 15px red;
-
-    transition:.2s;
-}
-
-button:hover{
-    transform:scale(1.05);
-}
-
-.heart-btn{
-    width:220px;
-    height:90px;
-    font-size:40px;
+.final{
+    color:#ff4040;
 }
 
 .progress{
     margin-top:25px;
     width:100%;
     height:12px;
-
+    background:#111;
     border-radius:20px;
-    background:#222;
-
     overflow:hidden;
 }
 
 .bar{
-    width:0;
     height:100%;
+    width:0;
 
-    background:#ff2a2a;
-    box-shadow:0 0 15px red;
+    background:#ff4040;
+
+    box-shadow:0 0 20px #ff4040;
 
     animation:load 4s linear forwards;
 }
@@ -130,19 +172,7 @@ button:hover{
     from{
         width:0;
     }
-
     to{
         width:100%;
     }
-}
-
-.final{
-    color:#ff3a3a;
-    text-shadow:0 0 25px red;
-}
-
-.dots{
-    color:#ff4b4b;
-    font-size:40px;
-    margin-bottom:20px;
 }
