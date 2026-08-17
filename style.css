@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap');
-{
+
+*{
     margin:0;
     padding:0;
     box-sizing:border-box;
@@ -58,8 +59,6 @@ body{
     align-items:center;
 }
 
-/* ромбы */
-
 .card::before{
     content:"◇";
     position:absolute;
@@ -88,62 +87,72 @@ body{
     0 0 40px #ff2d55;
 }
 
-h1{
-    font-family:'Great Vibes',cursive;
-    font-size:95px;
+.title{
+    font-family:'Great Vibes', cursive;
+    font-size:100px;
     font-weight:normal;
-    color:white;
     line-height:1;
+    color:white;
 }
 
-h1 span{
+.title span{
     display:block;
     margin-top:10px;
 
-    color:#ff436f;
+    color:#ff3f66;
 
     text-shadow:
-    0 0 10px #ff2d55,
-    0 0 25px #ff2d55,
-    0 0 50px #ff2d55;
+    0 0 10px #ff3f66,
+    0 0 25px #ff3f66,
+    0 0 50px #ff3f66;
+}
+
+.line{
+    margin:10px 0 25px;
+
+    color:#ff5c7b;
+    font-size:22px;
+
+    text-shadow:
+    0 0 10px #ff3f66,
+    0 0 25px #ff3f66;
+}
+
+.subtitle{
+    font-size:20px;
+    font-weight:300;
+    line-height:1.5;
+    color:white;
 }
 
 p{
     color:white;
-    font-size:22px;
-    margin:35px 0;
-    line-height:1.4;
 }
 
 .heart-btn{
-    width:300px;
-    height:90px;
+    width:340px;
+    height:95px;
 
     border-radius:999px;
 
-    background:transparent;
+    background:rgba(0,0,0,.4);
 
-    border:3px solid #ff4d6d;
+    border:3px solid #ff4d73;
 
-    color:#ff4d6d;
+    color:#ff6d8d;
     font-size:55px;
 
     cursor:pointer;
 
     box-shadow:
-    0 0 10px #ff2d55,
-    0 0 30px #ff2d55;
+    0 0 20px #ff4d73,
+    0 0 50px #ff4d73,
+    inset 0 0 15px rgba(255,80,120,.3);
 }
 
 .heart-btn:hover{
     transform:scale(1.05);
-
-    box-shadow:
-    0 0 20px #ff2d55,
-    0 0 60px #ff2d55;
 }
-
-/* надпись НА НА НА */
 
 .na{
     position:absolute;
@@ -151,18 +160,11 @@ p{
     bottom:80px;
 
     color:#ff2d55;
-
     font-size:35px;
     font-weight:bold;
 
     transform:rotate(-15deg);
-
-    text-shadow:
-    0 0 10px red,
-    0 0 25px red;
 }
-
-/* губы */
 
 .lips{
     position:absolute;
@@ -170,21 +172,11 @@ p{
     bottom:50px;
 
     font-size:90px;
-
-    color:#ff2d55;
-
-    text-shadow:
-    0 0 10px red,
-    0 0 30px red;
 }
 
 h2{
     color:#ff4d6d;
     font-size:55px;
-
-    text-shadow:
-    0 0 10px #ff2d55,
-    0 0 35px #ff2d55;
 }
 
 .progress{
@@ -203,82 +195,16 @@ h2{
 }
 
 @keyframes load{
-    from{
-        width:0;
-    }
-
-    to{
-        width:100%;
-    }
+    from{width:0;}
+    to{width:100%;}
 }
 
 .final{
     color:#ff4d6d;
-
-    text-shadow:
-    0 0 15px #ff2d55,
-    0 0 40px #ff2d55;
-}
-.title{
-    font-family:'Great Vibes', cursive;
-    font-size:100px;
-    font-weight:normal;
-    line-height:1;
 }
 
-.title span{
-    display:block;
-    margin-top:10px;
-
-    color:#ff3f66;
-
-    text-shadow:
-        0 0 10px #ff3f66,
-        0 0 25px #ff3f66,
-        0 0 50px #ff3f66;
-}
-
-.line{
-    margin:10px 0 25px;
-
-    color:#ff5c7b;
-    font-size:22px;
-
-    text-shadow:
-        0 0 10px #ff3f66,
-        0 0 25px #ff3f66;
-}
-
-.subtitle{
-    font-size:20px;
-    font-family:'Montserrat',sans-serif;
-    font-weight:300;
-    line-height:1.5;
-}
-
-.heart-btn{
-    width:340px;
-    height:95px;
-
-    border-radius:999px;
-
-    background:rgba(0,0,0,.4);
-
-    border:3px solid #ff4d73;
-
-    color:#ff6d8d;
-    font-size:55px;
-
-    box-shadow:
-        0 0 20px #ff4d73,
-        0 0 50px #ff4d73,
-        inset 0 0 15px rgba(255,80,120,.3);
-}
-
-.heart-btn:hover{
-    transform:scale(1.05);
-
-    box-shadow:
-        0 0 30px #ff4d73,
-        0 0 70px #ff4d73;
+.dots{
+    color:#ff4d6d;
+    font-size:40px;
+    margin-bottom:20px;
 }
