@@ -220,3 +220,66 @@ h2{
     0 0 15px #ff2d55,
     0 0 40px #ff2d55;
 }
+.title{
+    font-family:'Great Vibes', cursive;
+    font-size:100px;
+    font-weight:normal;
+    line-height:1;
+}
+
+.title span{
+    display:block;
+    margin-top:10px;
+
+    color:#ff3f66;
+
+    text-shadow:
+        0 0 10px #ff3f66,
+        0 0 25px #ff3f66,
+        0 0 50px #ff3f66;
+}
+
+.line{
+    margin:10px 0 25px;
+
+    color:#ff5c7b;
+    font-size:22px;
+
+    text-shadow:
+        0 0 10px #ff3f66,
+        0 0 25px #ff3f66;
+}
+
+.subtitle{
+    font-size:20px;
+    font-family:'Montserrat',sans-serif;
+    font-weight:300;
+    line-height:1.5;
+}
+
+.heart-btn{
+    width:340px;
+    height:95px;
+
+    border-radius:999px;
+
+    background:rgba(0,0,0,.4);
+
+    border:3px solid #ff4d73;
+
+    color:#ff6d8d;
+    font-size:55px;
+
+    box-shadow:
+        0 0 20px #ff4d73,
+        0 0 50px #ff4d73,
+        inset 0 0 15px rgba(255,80,120,.3);
+}
+
+.heart-btn:hover{
+    transform:scale(1.05);
+
+    box-shadow:
+        0 0 30px #ff4d73,
+        0 0 70px #ff4d73;
+}
