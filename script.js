@@ -1,3 +1,4 @@
+alert("JS работает!");
 function hideAll() {
     document.querySelectorAll(".card")
         .forEach(card => card.classList.remove("active"));
